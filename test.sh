@@ -9,7 +9,7 @@ function check_version {
     version=$3
 
     echo "Checking ${program} version..."
-    result=$(eval "docker run dwmkerr/terraform-ci ${command}")
+    result=$(eval "docker run palantirza/terraform-ci ${command}")
     if [[ ${result} != *"${version}"* ]]; then
         echo "Error: Expected ${program} ${version}, but got: ${result}" >&2
         exit 1
@@ -19,6 +19,6 @@ function check_version {
 }
 
 # Check the terraform version.
-terraform=$(docker run dwmkerr/terraform-ci terraform -v)
+terraform=$(docker run palantirza/terraform-ci terraform -v)
 check_version "terraform" "terraform -v" "0.11.3"
 check_version "tflint" "tflint -v" "0.5.4"

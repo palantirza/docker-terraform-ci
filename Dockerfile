@@ -6,7 +6,7 @@
 FROM debian:stretch
 
 # Some metadata.
-MAINTAINER Dave Kerr <github.com/dwmkerr>
+MAINTAINER Sean Hederman <github.com/shederman>
 
 # Install some common tools we'll need for builds.
 # Also install tools needed to use this as a CircleCI 2 build image. See:
