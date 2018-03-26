@@ -22,7 +22,7 @@ RUN apt-get update -qq && apt-get install -qq -y \
     ca-certificates \
     ruby-full
 
-RUN gem install awspec
+RUN bundle add awspec --source="https://rubygems.org"
 
 # Install Terraform.
 RUN wget -q https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip
