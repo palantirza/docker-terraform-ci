@@ -1,6 +1,6 @@
 # Grab the version number from the package.json.
 version := $(shell jq -r .version package.json)
-image := dwmkerr/terraform-ci
+image := shederman/palantirza/terraform-ci
 
 build:
 	docker build -t $(image):latest .	
