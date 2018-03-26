@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-awspec
+gem 'awspec', '1.5.0'
