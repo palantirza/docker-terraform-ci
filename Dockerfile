@@ -19,7 +19,10 @@ RUN apt-get update -qq && apt-get install -qq -y \
     tar \
     gzip \
     unzip \
-    ca-certificates
+    ca-certificates \
+    ruby-full
+
+RUN gem install awspec
 
 # Install Terraform.
 RUN wget -q https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip
