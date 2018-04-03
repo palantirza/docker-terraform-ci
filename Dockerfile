@@ -26,6 +26,7 @@ RUN gem install bundler
 
 COPY Gemfile /Gemfile
 COPY Gemfile.lock /Gemfile.lock
+COPY bundle_config /.bundle/config
 
 RUN bundle install
 
